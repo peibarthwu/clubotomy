@@ -1,21 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #2f2f2f;
+  --foreground: #ffffff;
+  --highlight: #6d6d6d;
+  --shadow: #000000;
+
+  /* --background: #a1a1a1;
+  --foreground: #ffffff;
+  --highlight: #ffffff;
+  --shadow: #a7a7a7; */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Monospace, serif;
+
+  /* font-family: "Anonymous Pro", serif; */
+}
+/* 
+h1::before {
+  @apply px-2;
+  font-family: 'Monospace', Times, serif;
+  content: 'Clubotomy';
+  color: #ff0000;
+  position: absolute;
+  top: -1px;
+  left: -0.5px;
+  z-index: -1;
+}
+
+h1::after {
+  @apply px-2;
+
+  content: 'Clubotomy';
+  color: #ff0000;
+  position: absolute;
+  top: 0.5px;
+  left: 0.5px;
+  z-index: -1;
+} */
+
+h1 {
+  @apply px-2;
+  /* font-family: "Verdana", serif; */
+  font-size: 16px;
+  transition: all 0.3s;
+  /* box-shadow: -1px -1px 0.2em var(--highlight), 1px 1px .2em var(--shadow); */
+}
+
+P {
+  @apply px-2;
+  /* filter: drop-shadow(0 0 3px var(--shadow)); */
+  font-size: 12px;
+  transition: all 0.3s;
+}
+
+p:hover {
+  /* color: #000000; */
+
+  /* filter: drop-shadow(0 0 3px #a6a6a6); */
+  /* box-shadow: -1px -1px 0.2em var(--highlight), 1px 1px .2em var(--shadow); */
+}
+
+a{
+  text-decoration: underline;
+}
+
+
+.card {
+  width: 400px;
+  padding: 10px;
+  height: 250px;
+  filter: drop-shadow(0 0 14px #000000);
+  background-color: var(--foreground);
+  /* border: 1px solid black; */
+  box-shadow: -1px -1px 0.2em var(--highlight), 1px 1px .2em var(--shadow);
+  transition: all 1s;
+  z-index: -2;
+  font-size: 12px;
+  color: var(--shadow);
+}
+
+button{
+  @apply px-2;
+  font-size: 14px;
+  color: #b1b1b1;
+  background-color: var(--background);
+  border-radius: 2px;
+  box-shadow: -1px -1px 0.2em var(--highlight), 1px 1px .2em var(--shadow);
+  transition: all 0.2s;
+}
+
+button.selected{
+  box-shadow: -1px -1px 0.2em var(--shadow), 1px 1px .2em var(--highlight);
+}
+
+
+form {
+  width: 400px;
+}
+
+input{
+  @apply px-2;
+  font-size: 14px;
+  color: #000000;
+  background-color: var(--background);
+  border-radius: 2px;
+  box-shadow: -1px -1px 0.2em var(--shadow), 1px 1px .2em var(--highlight);
+}
+
+.card input, .card button{
+  background-color: var(--foreground);
+}
+
+.analog{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bolder;
+}
+
+.digital{
+  box-shadow: -1px -1px 0.2em var(--highlight), 1px 1px .2em var(--shadow);
+}
+
+.card:hover{
+  box-shadow: -1px -1px 0.2em #a6a6a6, 1px 1px .2em #ffffff;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  position: absolute;
+  top: 0;
+  width: 12px; /* Vertical scrollbar width */
+  height: 12px; /* Horizontal scrollbar height */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light gray track background */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ffffff, #454545); /* Light to dark gradient */
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 8px rgba(90, 111, 118, 0.8), 
+              0px 0px 5px rgba(0, 0, 0, 0.2); /* Inner shadow for 3D effect */
+  transition: background 0.3s, box-shadow 0.3s;
 }
