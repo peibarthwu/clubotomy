@@ -5,10 +5,10 @@
 @tailwind utilities;
 
 :root {
-  --background: #2f2f2f;
+  --background: #acacac;
   --foreground: #ffffff;
-  --highlight: #6d6d6d;
-  --shadow: #000000;
+  --highlight: #ffffff;
+  --shadow: #585858;
 
   /* --background: #a1a1a1;
   --foreground: #ffffff;
@@ -21,69 +21,33 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Monospace, serif;
-
-  /* font-family: "Anonymous Pro", serif; */
 }
-/* 
-h1::before {
-  @apply px-2;
-  font-family: 'Monospace', Times, serif;
-  content: 'Clubotomy';
-  color: #ff0000;
-  position: absolute;
-  top: -1px;
-  left: -0.5px;
-  z-index: -1;
-}
-
-h1::after {
-  @apply px-2;
-
-  content: 'Clubotomy';
-  color: #ff0000;
-  position: absolute;
-  top: 0.5px;
-  left: 0.5px;
-  z-index: -1;
-} */
 
 h1 {
   @apply px-2;
   /* font-family: "Verdana", serif; */
   font-size: 16px;
   transition: all 0.3s;
-  /* box-shadow: -1px -1px 0.2em var(--highlight), 1px 1px .2em var(--shadow); */
 }
 
 P {
   @apply px-2;
-  /* filter: drop-shadow(0 0 3px var(--shadow)); */
   font-size: 12px;
   transition: all 0.3s;
-}
-
-p:hover {
-  /* color: #000000; */
-
-  /* filter: drop-shadow(0 0 3px #a6a6a6); */
-  /* box-shadow: -1px -1px 0.2em var(--highlight), 1px 1px .2em var(--shadow); */
 }
 
 a{
   text-decoration: underline;
 }
 
-
 .card {
-  width: 400px;
+  @apply w-[90vw] h-[56vw] sm:w-[400px] sm:h-[250px];
+
   padding: 10px;
-  height: 250px;
-  filter: drop-shadow(0 0 14px #000000);
+  filter: drop-shadow(0 0 14px #777777);
   background-color: var(--foreground);
-  /* border: 1px solid black; */
   box-shadow: -1px -1px 0.2em var(--highlight), 1px 1px .2em var(--shadow);
   transition: all 1s;
-  z-index: -2;
   font-size: 12px;
   color: var(--shadow);
 }
@@ -91,7 +55,7 @@ a{
 button{
   @apply px-2;
   font-size: 14px;
-  color: #b1b1b1;
+  color: #000000;
   background-color: var(--background);
   border-radius: 2px;
   box-shadow: -1px -1px 0.2em var(--highlight), 1px 1px .2em var(--shadow);
@@ -101,7 +65,6 @@ button{
 button.selected{
   box-shadow: -1px -1px 0.2em var(--shadow), 1px 1px .2em var(--highlight);
 }
-
 
 form {
   width: 400px;
@@ -146,7 +109,7 @@ input{
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #ffffff, #454545); /* Light to dark gradient */
+  background: linear-gradient(180deg, #ffffff, #7bc9cd); /* Light to dark gradient */
   border-radius: 10px;
   box-shadow: inset 0px 0px 8px rgba(90, 111, 118, 0.8), 
               0px 0px 5px rgba(0, 0, 0, 0.2); /* Inner shadow for 3D effect */
