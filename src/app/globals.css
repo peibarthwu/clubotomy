@@ -55,7 +55,7 @@ a{
 button{
   @apply px-2;
   font-size: 14px;
-  color: #000000;
+  color: #414040;
   background-color: var(--background);
   border-radius: 2px;
   box-shadow: -1px -1px 0.2em var(--highlight), 1px 1px .2em var(--shadow);
@@ -104,7 +104,7 @@ input{
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Light gray track background */
+  background: #e1e1e1; /* Light gray track background */
   border-radius: 10px; /* Rounded corners */
 }
 

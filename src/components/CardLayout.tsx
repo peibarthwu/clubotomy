@@ -30,9 +30,8 @@ const CardLayout = () => {
 
     const scrollMailing = () => {
       if (top.current) {
-        console.log(top.current.scrollWidth)
         gsap.to(top.current, {
-          scrollTo: { x: top.current.scrollWidth },
+          scrollTo: { x: top.current.scrollWidth / 2 },
           duration: 1,
           ease: "power2.inOut",
         });
@@ -41,10 +40,24 @@ const CardLayout = () => {
       topButton.current?.classList.remove("selected");
     };
 
+    const onScroll = () => {
+      if(!top.current) return
+      if(top.current.scrollLeft > top.current.offsetWidth * 0.5 ){
+        bottomButton.current?.classList.add("selected");
+        topButton.current?.classList.remove("selected");
+      } else {
+        topButton.current?.classList.add("selected");
+        bottomButton.current?.classList.remove("selected");
+      }
+    };
+
     if (topButton.current)
       topButton.current.addEventListener("click", scrollInfo);
     if (bottomButton.current)
       bottomButton.current.addEventListener("click", scrollMailing);
+
+    if (top.current)
+    top.current.addEventListener("scroll", onScroll);
 
     return () => {
     };
@@ -79,7 +92,7 @@ const CardLayout = () => {
         className="m-4 z-10 absolute left-0 md:top-1/2 selected"
         ref={topButton}
       >
-        Upcoming
+        About
       </button>
       <button className="m-4 z-10 absolute right-0 md:top-1/2" ref={bottomButton}>
         Mailing list
