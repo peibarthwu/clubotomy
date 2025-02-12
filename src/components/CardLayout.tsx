@@ -8,7 +8,7 @@ import CardMailing from "./CardMailing";
 // Register the ScrollToPlugin
 gsap.registerPlugin(ScrollToPlugin);
 
-const CardLayout = () => {
+const CardLayout = ({title, date, link, text}) => {
   const top = useRef<HTMLDivElement | null>(null); // Specify the type here
 
   const topButton = useRef<HTMLButtonElement | null>(null); // Specify the type here
@@ -71,10 +71,10 @@ const CardLayout = () => {
           ref={top}
         >
           <div className="w-screen h-full flex-shrink-0 relative">
-            <CardAbout date="3/14/25" title="Clubotomy NYC" caption="No thoughts on the dancefloor" url={""} className="top-full left-1/2 -translate-x-1/2 -translate-y-1/2"/>
+            <CardAbout date={date} title={title} caption={text} url={link} className="top-full left-1/2 -translate-x-1/2 -translate-y-1/2"/>
           </div>
           <div className="w-screen h-full  flex-shrink-0 relative">
-            <CardMailing title={"Clubotomy NYC"} caption={"No thoughts on the dancefloor"} className={"top-full left-1/2 -translate-x-1/2 -translate-y-1/2"}/>
+            <CardMailing title={title} caption={text} className={"top-full left-1/2 -translate-x-1/2 -translate-y-1/2"}/>
           </div>
         </div>
       </div>
@@ -84,7 +84,7 @@ const CardLayout = () => {
           className="min-w-full h-full overflow-y-hidden overflow-x-scroll flex flex-row "
         >
           <div className="w-screen h-full flex-shrink-0 relative">
-          <CardAbout date="3/14/25" title="Clubotomy NYC" caption="No thoughts on the dancefloor" url={""} className="top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 "/>
+          <CardAbout date={date} title={title}  caption={text}  url={link} className="top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 "/>
           </div>
         </div>
       </div>
