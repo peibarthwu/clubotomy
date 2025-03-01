@@ -24,6 +24,11 @@ export default defineType({
       title: 'ticket link',
       type: 'slug',
     }),
+    defineField({
+      name: 'social_slug',
+      title: 'social link',
+      type: 'slug',
+    }),
     {
       name: 'text',
       title: 'Text',

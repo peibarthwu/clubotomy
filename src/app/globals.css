@@ -115,3 +115,32 @@ input{
               0px 0px 5px rgba(0, 0, 0, 0.2); /* Inner shadow for 3D effect */
   transition: background 0.3s, box-shadow 0.3s;
 }
+
+.social{
+  position: relative;
+}
+
+.social::before{
+  content: "@clubotomy";
+  top: 0.5px;
+  left: 0.5px;
+  position: absolute;
+  color: #00000027;
+  filter: blur(4px);
+  z-index: -1;
+}
+
+.emaillist .mastfoot{
+  display: none !important;
+}
+
+[data-form="e8b8252a-f492-11ef-bb03-1da31e7a2d67"] input{
+  @apply px-2 !important;
+  font-size: 14px !important;
+  color: #000000 !important;
+  background-color: var(--background) !important;
+  border-radius: 2px !important;
+  border: none;
+  border-color: none !important;
+  box-shadow: -1px -1px 0.2em var(--shadow), 1px 1px .2em var(--highlight) !important;
+}

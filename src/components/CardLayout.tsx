@@ -8,7 +8,15 @@ import CardMailing from "./CardMailing";
 // Register the ScrollToPlugin
 gsap.registerPlugin(ScrollToPlugin);
 
-const CardLayout = ({title, date, link, text}) => {
+// Define the types for the props using type aliasing
+type CardLayoutProps = {
+  title: string;
+  date: string;
+  link: string;
+  text: string;
+};
+
+const CardLayout = ({ title, date, link, text }: CardLayoutProps) => {
   const top = useRef<HTMLDivElement | null>(null); // Specify the type here
 
   const topButton = useRef<HTMLButtonElement | null>(null); // Specify the type here
