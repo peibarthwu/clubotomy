@@ -25,7 +25,12 @@
   },
   "devDependencies": {
     "@sanity/eslint-config-studio": "^5.0.1",
-    "@types/react": "^18.0.25",
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint-config-next": "15.1.6",
+    "postcss": "^8",
     "eslint": "^9.9.0",
     "prettier": "^3.0.2",
     "typescript": "^5.1.6"
