@@ -6,6 +6,7 @@ import {schemaTypes} from './schemaTypes'
 export default defineConfig({
   name: 'default',
   title: 'clubotomy',
+  autoUpdates: false,
 
   projectId: 'pnk7p2b2',
   dataset: 'production',
@@ -18,4 +19,5 @@ export default defineConfig({
   schema: {
     types: schemaTypes,
   },
+
 })
