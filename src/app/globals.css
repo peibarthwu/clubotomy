@@ -130,7 +130,7 @@ input {
 }
 
 [data-form="e8b8252a-f492-11ef-bb03-1da31e7a2d67"] input {
-  @apply !px-2 !py-[1px];
+  @apply !px-[4px] !py-[1px];
   font-size: 14px !important;
   color: var(--shadow) !important;
   background-color: var(--foreground) !important;

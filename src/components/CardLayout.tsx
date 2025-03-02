@@ -129,7 +129,7 @@ const CardLayout = ({ title, date, link, text }: CardLayoutProps) => {
           </div>
         </div>
       </div>
-      <div className="w-screen absolute top-[calc(50vh-6px)] left-0 custom-scrollbar z-10">
+      <div className="w-screen absolute top-[calc(50dvh-6px)] left-0 custom-scrollbar z-10">
         <button className="custom-scroll-control" ref={control}></button>
       </div>
       <div className="w-screen bottom-0 fixed overflow-y-hidden h-1/2 mr-[1000px]">
