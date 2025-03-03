@@ -119,6 +119,8 @@ const CardLayout = ({ title, date, link, text, socialurl, socialusername }: Card
               title={title}
               caption={text}
               url={link}
+              socialusername={socialusername}
+              socialurl={socialurl}
               className="top-full left-1/2 -translate-x-1/2 -translate-y-1/2"
             />
           </div>
