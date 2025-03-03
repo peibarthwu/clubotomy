@@ -6,7 +6,7 @@ import CardLayout from "@/components/CardLayout";
 const HOME_QUERY = `*[
   _type == "home"
   && defined(slug.current)
-][0]{_id, title, date, slug, text}`;
+][0]{_id, title, date, slug, text, "social_slug": social_slug.current, social_username}`;
 
 const options = { next: { revalidate: 86400 } };
 

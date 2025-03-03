@@ -151,7 +151,6 @@ const CardLayout = ({ title, date, link, text, socialurl, socialusername }: Card
           </div>
         </div>
       </div>
-
       <button
         className="m-4 z-10 absolute left-0 md:top-1/2 selected"
         ref={topButton}

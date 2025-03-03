@@ -21,7 +21,7 @@ const CardAbout = (props: {
       <div className="text-[13px] font-times absolute w-full px-6 bottom-[14px] flex flex-row justify-between">
         <span>{props.caption}</span>
         {props.socialurl && props.socialusername && (
-          <a href={props.socialurl}>@{props.socialusername}</a>
+          <a href={props.socialurl} className="no-underline">@{props.socialusername}</a>
         )}
       </div>
     </div>

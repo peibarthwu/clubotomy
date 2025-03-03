@@ -34,6 +34,14 @@ a {
   text-decoration: underline;
 }
 
+a:hover{
+  color: black;
+}
+
+.emaillist {
+  width: 100%;
+}
+
 .card {
   @apply w-[90vw] h-[56vw] sm:w-[400px] sm:h-[250px];
 
@@ -119,6 +127,10 @@ input {
   box-shadow: -1px -1px 0.2em var(--highlight), 1px 1px .2em #dcdcdc !important;
 }
 
+[data-form="e8b8252a-f492-11ef-bb03-1da31e7a2d67"] .emailoctopus-error-message, [data-form="e8b8252a-f492-11ef-bb03-1da31e7a2d67"] .emailoctopus-success-message{
+  color: var(--shadow) !important;
+}
+
 .custom-scrollbar{
   background: #c7c7c7;
   border-radius: 10px;
@@ -133,4 +145,9 @@ input {
   position: absolute;
   height: 100%;
   width: 50%;
+}
+
+::selection {
+  background-color: #aed6d8;
+  color: rgb(110, 110, 110); 
 }
