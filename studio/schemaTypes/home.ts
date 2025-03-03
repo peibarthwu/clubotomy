@@ -21,13 +21,18 @@ export default defineType({
     }),
     defineField({
       name: 'slug',
-      title: 'ticket link',
+      title: 'Ticket link',
       type: 'slug',
     }),
     defineField({
       name: 'social_slug',
-      title: 'social link',
+      title: 'Social link',
       type: 'slug',
+    }),
+    defineField({
+      name: 'social_username',
+      title: 'Social username',
+      type: 'string',
     }),
     {
       name: 'text',

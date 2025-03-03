@@ -30,11 +30,9 @@ const CardMailing = (props: {
       className={`card overflow-hidden absolute ${props.className} text-center flex flex-row  justify-center items-center`}
     >
       <div className="absolute top-4 emaillist" ref={emailList}>
-        {/* <input placeholder="Email"></input>
-        <button className="ml-2">Submit</button> */}
       </div>
       <h1 className="">{props.title}</h1>
-      <div className="absolute bottom-4">{props.caption}</div>
+      <div className="absolute bottom-[14px]">{props.caption}</div>
     </div>
   );
 };

@@ -25,7 +25,7 @@ export default async function IndexPage() {
 
   return (
     <main>
-      <CardLayout title={homeDocument.title} date={new Date(homeDocument.date).toLocaleDateString()} link={homeDocument.slug.current} text={homeDocument.text}/>
+      <CardLayout title={homeDocument.title} date={new Date(homeDocument.date).toLocaleDateString()} link={homeDocument.slug.current} text={homeDocument.text} socialurl={homeDocument.social_slug} socialusername={homeDocument.social_username}/>
     </main>
   );
 }

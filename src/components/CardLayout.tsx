@@ -15,9 +15,11 @@ type CardLayoutProps = {
   date: string;
   link: string;
   text: string;
+  socialurl: string;
+  socialusername: string;
 };
 
-const CardLayout = ({ title, date, link, text }: CardLayoutProps) => {
+const CardLayout = ({ title, date, link, text, socialurl, socialusername }: CardLayoutProps) => {
   const top = useRef<HTMLDivElement | null>(null); // Specify the type here
   const control = useRef<HTMLButtonElement | null>(null);
   const topButton = useRef<HTMLButtonElement | null>(null); // Specify the type here
@@ -140,6 +142,8 @@ const CardLayout = ({ title, date, link, text }: CardLayoutProps) => {
               title={title}
               caption={text}
               url={link}
+              socialusername={socialusername}
+              socialurl={socialurl}
               className="top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 "
             />
           </div>
