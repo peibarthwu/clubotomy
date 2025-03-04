@@ -163,6 +163,8 @@ const CardLayout = ({ title, date, link, text, socialurl, socialusername }: Card
       >
         Mailing list
       </button>
+
+      <a href="https://peibarthwu.com/" className="no-underline fixed bottom-1 text-[#a0a0a0] right-2">YAY</a>
     </div>
   );
 };
