@@ -24,9 +24,8 @@ h1 {
   transition: all 0.3s;
 }
 
-P {
+p {
   @apply px-2;
-  font-size: 12px;
   transition: all 0.3s;
 }
 
@@ -69,6 +68,10 @@ button.selected {
 .analog{
   font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
+}
+
+.card {
+  font-size: 13px
 }
 
 input {
